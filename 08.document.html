@@ -17,14 +17,19 @@
 		.navi-wrap {background-color: gainsboro;}
 		.navi-wrap.main-navi {border: 2px solid deeppink;}
 		.navi-wrap.port-navi {border: 2px solid deepskyblue;}
-		.navi-wrap > .navi {color: green;}
+		.navi-wrap .navi {color: green;}
 		.main-navi > .navi {border: 2px solid red;}
 		.port-navi > .navi {border: 2px solid blue;}
+
+/* .navi-wrap.navi {color: green;} -> A and B 인 것 */
+/* .navi-wrap .navi {color: green;} -> A or B 모두 */
+/* .navi-wrap > .navi {color: green;} -> B in A 인 것만 */
+
 	</style>
 </head>
 <body>
-	<!-- div.wrapper -->
-	<!-- h1.logo -->
+	<!-- div.wrapper = 	<div class="wrapper"> </div> -->
+	<!-- h1.logo = <h1 class="logo"> </h1> -->
 	<div class="wrapper"> 
 		<h1 class="logo">LOGO</h1>
 		<ul class="navi-wrap main-navi" id="mainNavi">
@@ -32,8 +37,11 @@
 			<li class="navi">ABOUT</li>
 			<li class="navi">PORTPOLIO</li>
 			<li class="navi">CONTACT</li>
+			<div>
+				<li class="navi">test</li>
+			</div>
 		</ul>
-		<!-- ul.navi-wrap>li.navi*3/ -->
+		<!-- ul.navi-wrap>li.navi*3 -->
 		<ul class="navi-wrap port-navi">
 			<li class="navi">PUBLISHING</li>
 			<li class="navi">FRONT-END</li>
